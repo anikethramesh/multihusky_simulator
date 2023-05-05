@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="kinect_enabled" default="$(optenv HUSKY_UR5_ENABLED false)"/>
     <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
 
-    <param name="robot_description" command="$(find xacro)/xacro '$(find multihusky_gazebo)/urdf/husky.urdf.xacro'
+    <param name="robot_description" command="$(find xacro)/xacro '$(find husky_description)/urdf/husky.urdf.xacro'
         --inorder
         robot_namespace:=$(arg robot_namespace)
         tfpre:=$(arg tfpre)

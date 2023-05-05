@@ -9,11 +9,21 @@ Panels:
         - /Husky_h11
         - /TF1
         - /TwistMarker1
-        - /Navigation1/Exploration1
+        - /Navigation_h11
+        - /Navigation_h11/Exploration1
+        - /Navigation_h11/Static Map1
+        - /Navigation_h11/Global Costmap1
+        - /Navigation_h11/Local Costmap1
         - /Husky_h21
         - /TwistMarker_h21
-      Splitter Ratio: 0.494924009
-    Tree Height: 844
+        - /Image1
+        - /Image2
+        - /Sensing_h21
+        - /Navigation_h21
+        - /Navigation_h21/Global Costmap1
+        - /Navigation_h21/Local Costmap1
+      Splitter Ratio: 0.49492400884628296
+    Tree Height: 604
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -22,17 +32,18 @@ Panels:
       - /2D Nav Goal1
       - /Publish Point1
     Name: Tool Properties
-    Splitter Ratio: 0.588679016
+    Splitter Ratio: 0.5886790156364441
   - Class: rviz/Views
     Expanded:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
   - Class: rviz/Time
-    Experimental: false
     Name: Time
     SyncMode: 0
     SyncSource: Image
+Preferences:
+  PromptSaveOnExit: true
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -44,7 +55,7 @@ Visualization Manager:
       Color: 160; 160; 164
       Enabled: true
       Line Style:
-        Line Width: 0.0299999993
+        Line Width: 0.029999999329447746
         Value: Lines
       Name: Grid
       Normal Cell Count: 0
@@ -70,22 +81,35 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        base_laser:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        base_laser_mount:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_realsense_bottom_screw_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_realsense_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_realsense_link_gazebo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         front_bumper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_laser_mount:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -123,7 +147,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        red_flag:
+        sensor_arch_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        sensor_arch_mount_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -133,11 +161,19 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         top_plate_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         user_rail_link:
           Alpha: 1
           Show Axes: false
@@ -156,13 +192,19 @@ Visualization Manager:
         All Enabled: true
         h1_tf/base_footprint:
           Value: true
-        h1_tf/base_laser:
-          Value: true
-        h1_tf/base_laser_mount:
-          Value: true
         h1_tf/base_link:
           Value: true
+        h1_tf/camera_realsense_bottom_screw_frame:
+          Value: true
+        h1_tf/camera_realsense_link:
+          Value: true
+        h1_tf/camera_realsense_link_gazebo:
+          Value: true
         h1_tf/front_bumper_link:
+          Value: true
+        h1_tf/front_laser:
+          Value: true
+        h1_tf/front_laser_mount:
           Value: true
         h1_tf/front_left_wheel_link:
           Value: true
@@ -180,27 +222,35 @@ Visualization Manager:
           Value: true
         h1_tf/rear_right_wheel_link:
           Value: true
-        h1_tf/red_flag:
+        h1_tf/sensor_arch_base_link:
+          Value: true
+        h1_tf/sensor_arch_mount_link:
           Value: true
         h1_tf/top_chassis_link:
           Value: true
+        h1_tf/top_plate_front_link:
+          Value: true
         h1_tf/top_plate_link:
+          Value: true
+        h1_tf/top_plate_rear_link:
           Value: true
         h1_tf/user_rail_link:
           Value: true
         h2_tf/base_footprint:
           Value: true
-        h2_tf/base_laser:
-          Value: true
-        h2_tf/base_laser_mount:
-          Value: true
         h2_tf/base_link:
           Value: true
-        h2_tf/camera_frame_optical:
+        h2_tf/camera_realsense_bottom_screw_frame:
           Value: true
-        h2_tf/camera_link:
+        h2_tf/camera_realsense_link:
+          Value: true
+        h2_tf/camera_realsense_link_gazebo:
           Value: true
         h2_tf/front_bumper_link:
+          Value: true
+        h2_tf/front_laser:
+          Value: true
+        h2_tf/front_laser_mount:
           Value: true
         h2_tf/front_left_wheel_link:
           Value: true
@@ -218,16 +268,23 @@ Visualization Manager:
           Value: true
         h2_tf/rear_right_wheel_link:
           Value: true
+        h2_tf/sensor_arch_base_link:
+          Value: true
         h2_tf/sensor_arch_mount_link:
           Value: true
         h2_tf/top_chassis_link:
           Value: true
+        h2_tf/top_plate_front_link:
+          Value: true
         h2_tf/top_plate_link:
+          Value: true
+        h2_tf/top_plate_rear_link:
           Value: true
         h2_tf/user_rail_link:
           Value: true
         map:
           Value: true
+      Marker Alpha: 1
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -255,14 +312,22 @@ Visualization Manager:
                 {}
               h1_tf/rear_right_wheel_link:
                 {}
-              h1_tf/red_flag:
-                {}
               h1_tf/top_chassis_link:
                 {}
               h1_tf/top_plate_link:
-                h1_tf/base_laser_mount:
-                  h1_tf/base_laser:
+                h1_tf/front_laser_mount:
+                  h1_tf/front_laser:
                     {}
+                h1_tf/sensor_arch_base_link:
+                  h1_tf/sensor_arch_mount_link:
+                    h1_tf/camera_realsense_bottom_screw_frame:
+                      h1_tf/camera_realsense_link:
+                        h1_tf/camera_realsense_link_gazebo:
+                          {}
+                h1_tf/top_plate_front_link:
+                  {}
+                h1_tf/top_plate_rear_link:
+                  {}
               h1_tf/user_rail_link:
                 {}
           h2_tf/odom:
@@ -288,13 +353,19 @@ Visualization Manager:
               h2_tf/top_chassis_link:
                 {}
               h2_tf/top_plate_link:
-                h2_tf/base_laser_mount:
-                  h2_tf/base_laser:
+                h2_tf/front_laser_mount:
+                  h2_tf/front_laser:
                     {}
-                h2_tf/sensor_arch_mount_link:
-                  h2_tf/camera_link:
-                    h2_tf/camera_frame_optical:
-                      {}
+                h2_tf/sensor_arch_base_link:
+                  h2_tf/sensor_arch_mount_link:
+                    h2_tf/camera_realsense_bottom_screw_frame:
+                      h2_tf/camera_realsense_link:
+                        h2_tf/camera_realsense_link_gazebo:
+                          {}
+                h2_tf/top_plate_front_link:
+                  {}
+                h2_tf/top_plate_rear_link:
+                  {}
               h2_tf/user_rail_link:
                 {}
       Update Interval: 0
@@ -310,7 +381,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Group
       Displays:
-        - Angle Tolerance: 0.100000001
+        - Angle Tolerance: 0.10000000149011612
           Class: rviz/Odometry
           Covariance:
             Orientation:
@@ -322,7 +393,7 @@ Visualization Manager:
               Scale: 1
               Value: true
             Position:
-              Alpha: 0.300000012
+              Alpha: 0.30000001192092896
               Color: 204; 51; 204
               Scale: 1
               Value: true
@@ -330,16 +401,17 @@ Visualization Manager:
           Enabled: true
           Keep: 100
           Name: Odometry
-          Position Tolerance: 0.100000001
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
           Shape:
             Alpha: 1
             Axes Length: 1
-            Axes Radius: 0.100000001
+            Axes Radius: 0.10000000149011612
             Color: 255; 25; 0
-            Head Length: 0.300000012
-            Head Radius: 0.100000001
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
             Shaft Length: 1
-            Shaft Radius: 0.0500000007
+            Shaft Radius: 0.05000000074505806
             Value: Arrow
           Topic: /h1/odometry/filtered
           Unreliable: false
@@ -347,8 +419,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 0.405930012
-            Min Value: 0.405930012
+            Max Value: 0.4059300124645233
+            Min Value: 0.4059300124645233
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -359,15 +431,13 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 999999
           Min Color: 0; 0; 0
-          Min Intensity: -1.83101002e-36
           Name: LaserScan
           Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
-          Size (m): 0.0299999993
+          Size (m): 0.029999999329447746
           Style: Flat Squares
           Topic: /scan
           Unreliable: false
@@ -389,15 +459,13 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 4096
           Min Color: 0; 0; 0
-          Min Intensity: 0
           Name: PointCloud2
           Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
-          Size (m): 0.00999999978
+          Size (m): 0.009999999776482582
           Style: Flat Squares
           Topic: /camera/depth/points
           Unreliable: false
@@ -407,7 +475,7 @@ Visualization Manager:
         - Acceleration properties:
             Acc. vector alpha: 0.5
             Acc. vector color: 85; 0; 255
-            Acc. vector scale: 0.0500000007
+            Acc. vector scale: 0.05000000074505806
             Derotate acceleration: false
             Enable acceleration: true
           Axes properties:
@@ -417,18 +485,19 @@ Visualization Manager:
             Box alpha: 1
             Box color: 85; 0; 255
             Enable box: false
-            x_scale: 0.400000006
-            y_scale: 0.400000006
-            z_scale: 0.400000006
+            x_scale: 0.4000000059604645
+            y_scale: 0.4000000059604645
+            z_scale: 0.4000000059604645
           Class: rviz_imu_plugin/Imu
           Enabled: false
           Name: Imu
+          Queue Size: 10
           Topic: /imu/data
           Unreliable: false
           Value: false
           fixed_frame_orientation: true
       Enabled: true
-      Name: Sensing
+      Name: Sensing_h1
     - Class: rviz/Group
       Displays:
         - Class: rviz/Group
@@ -441,7 +510,7 @@ Visualization Manager:
                 {}
               Queue Size: 100
               Value: true
-            - Alpha: 0.699999988
+            - Alpha: 0.699999988079071
               Class: rviz/Map
               Color Scheme: costmap
               Draw Behind: true
@@ -453,7 +522,7 @@ Visualization Manager:
               Value: true
           Enabled: false
           Name: Exploration
-        - Alpha: 0.699999988
+        - Alpha: 0.699999988079071
           Class: rviz/Map
           Color Scheme: map
           Draw Behind: true
@@ -463,23 +532,23 @@ Visualization Manager:
           Unreliable: false
           Use Timestamp: false
           Value: true
-        - Alpha: 0.699999988
+        - Alpha: 0.699999988079071
           Class: rviz/Map
           Color Scheme: costmap
           Draw Behind: true
           Enabled: true
           Name: Global Costmap
-          Topic: /move_base/global_costmap/costmap
+          Topic: /h1/move_base1/global_costmap/costmap
           Unreliable: false
           Use Timestamp: false
           Value: true
-        - Alpha: 0.699999988
+        - Alpha: 0.699999988079071
           Class: rviz/Map
           Color Scheme: costmap
           Draw Behind: false
           Enabled: true
           Name: Local Costmap
-          Topic: /move_base/local_costmap/costmap
+          Topic: /h1/move_base1/local_costmap/costmap
           Unreliable: false
           Use Timestamp: false
           Value: true
@@ -488,11 +557,11 @@ Visualization Manager:
           Class: rviz/Path
           Color: 25; 255; 0
           Enabled: true
-          Head Diameter: 0.300000012
-          Head Length: 0.200000003
-          Length: 0.300000012
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
           Line Style: Lines
-          Line Width: 0.0299999993
+          Line Width: 0.029999999329447746
           Name: Global Plan
           Offset:
             X: 0
@@ -500,9 +569,10 @@ Visualization Manager:
             Z: 0
           Pose Color: 255; 85; 255
           Pose Style: None
-          Radius: 0.0299999993
-          Shaft Diameter: 0.100000001
-          Shaft Length: 0.100000001
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
           Topic: /move_base/NavfnROS/plan
           Unreliable: false
           Value: true
@@ -511,11 +581,11 @@ Visualization Manager:
           Class: rviz/Path
           Color: 255; 0; 0
           Enabled: true
-          Head Diameter: 0.300000012
-          Head Length: 0.200000003
-          Length: 0.300000012
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
           Line Style: Lines
-          Line Width: 0.0299999993
+          Line Width: 0.029999999329447746
           Name: Local Plan
           Offset:
             X: 0
@@ -523,14 +593,15 @@ Visualization Manager:
             Z: 0
           Pose Color: 255; 85; 255
           Pose Style: None
-          Radius: 0.0299999993
-          Shaft Diameter: 0.100000001
-          Shaft Length: 0.100000001
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
           Topic: /move_base/DWAPlannerROS/local_plan
           Unreliable: false
           Value: true
-      Enabled: false
-      Name: Navigation
+      Enabled: true
+      Name: Navigation_h1
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -545,31 +616,35 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        base_laser:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        base_laser_mount:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        camera_frame_optical:
+        camera_realsense_bottom_screw_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        camera_link:
+        camera_realsense_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_realsense_link_gazebo:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         front_bumper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_laser_mount:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -607,6 +682,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        sensor_arch_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         sensor_arch_mount_link:
           Alpha: 1
           Show Axes: false
@@ -617,11 +696,19 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        top_plate_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         top_plate_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        top_plate_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         user_rail_link:
           Alpha: 1
           Show Axes: false
@@ -643,8 +730,8 @@ Visualization Manager:
       Update Topic: /h2/twist_marker_server/update
       Value: true
     - Class: rviz/Image
-      Enabled: true
-      Image Topic: /h2/camera/depth/image_raw
+      Enabled: false
+      Image Topic: /h1/realsense/color/image_raw
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -653,10 +740,22 @@ Visualization Manager:
       Queue Size: 2
       Transport Hint: raw
       Unreliable: false
-      Value: true
+      Value: false
+    - Class: rviz/Image
+      Enabled: false
+      Image Topic: /h2/realsense/color/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
     - Class: rviz/Image
       Enabled: true
-      Image Topic: /h2/camera/rgb/image_raw
+      Image Topic: /output_camera
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -666,6 +765,229 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: true
+    - Class: rviz/Group
+      Displays:
+        - Angle Tolerance: 0.10000000149011612
+          Class: rviz/Odometry
+          Covariance:
+            Orientation:
+              Alpha: 0.5
+              Color: 255; 255; 127
+              Color Style: Unique
+              Frame: Local
+              Offset: 1
+              Scale: 1
+              Value: true
+            Position:
+              Alpha: 0.30000001192092896
+              Color: 204; 51; 204
+              Scale: 1
+              Value: true
+            Value: true
+          Enabled: true
+          Keep: 100
+          Name: Odometry
+          Position Tolerance: 0.10000000149011612
+          Queue Size: 10
+          Shape:
+            Alpha: 1
+            Axes Length: 1
+            Axes Radius: 0.10000000149011612
+            Color: 255; 25; 0
+            Head Length: 0.30000001192092896
+            Head Radius: 0.10000000149011612
+            Shaft Length: 1
+            Shaft Radius: 0.05000000074505806
+            Value: Arrow
+          Topic: /h1/odometry/filtered
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 0.4059300124645233
+            Min Value: 0.4059300124645233
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/LaserScan
+          Color: 255; 255; 127
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: LaserScan
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.029999999329447746
+          Style: Flat Squares
+          Topic: /scan
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: RGB8
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Min Color: 0; 0; 0
+          Name: PointCloud2
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.009999999776482582
+          Style: Flat Squares
+          Topic: /camera/depth/points
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Acceleration properties:
+            Acc. vector alpha: 0.5
+            Acc. vector color: 85; 0; 255
+            Acc. vector scale: 0.05000000074505806
+            Derotate acceleration: false
+            Enable acceleration: true
+          Axes properties:
+            Axes scale: 1
+            Enable axes: true
+          Box properties:
+            Box alpha: 1
+            Box color: 85; 0; 255
+            Enable box: false
+            x_scale: 0.4000000059604645
+            y_scale: 0.4000000059604645
+            z_scale: 0.4000000059604645
+          Class: rviz_imu_plugin/Imu
+          Enabled: false
+          Name: Imu
+          Queue Size: 10
+          Topic: /imu/data
+          Unreliable: false
+          Value: false
+          fixed_frame_orientation: true
+      Enabled: true
+      Name: Sensing_h2
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Marker
+              Enabled: true
+              Marker Topic: /exploration_polygon_marker
+              Name: Exploration Marker
+              Namespaces:
+                {}
+              Queue Size: 100
+              Value: true
+            - Alpha: 0.699999988079071
+              Class: rviz/Map
+              Color Scheme: costmap
+              Draw Behind: true
+              Enabled: true
+              Name: Exploration Costmap
+              Topic: /explore_server/explore_costmap/costmap
+              Unreliable: false
+              Use Timestamp: false
+              Value: true
+          Enabled: false
+          Name: Exploration
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: map
+          Draw Behind: true
+          Enabled: true
+          Name: Static Map
+          Topic: /map
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: true
+          Enabled: true
+          Name: Global Costmap
+          Topic: /h2/move_base2/global_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Local Costmap
+          Topic: /h2/move_base2/local_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Global Plan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /move_base/NavfnROS/plan
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 0; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Local Plan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Queue Size: 10
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /move_base/DWAPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: Navigation_h2
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -679,9 +1001,14 @@ Visualization Manager:
       Hide Inactive Objects: true
     - Class: rviz/Select
     - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
       Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
     - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
+      Topic: /h1/move_base_simple/goal
+    - Class: rviz/SetGoal
+      Topic: /h2/move_base_simple/goal
     - Class: rviz/PublishPoint
       Single click: false
       Topic: /clicked_point
@@ -689,35 +1016,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 9.58912849
+      Distance: 29.440486907958984
       Enable Stereo Rendering:
-        Stereo Eye Separation: 0.0599999987
+        Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.576838672
-        Y: -2.53981423
-        Z: -0.886316061
+        X: -0.4355575442314148
+        Y: -1.6924363374710083
+        Z: -0.7337934374809265
       Focal Shape Fixed Size: true
-      Focal Shape Size: 0.0500000007
+      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.00999999978
-      Pitch: 0.484800577
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 4.0254035
+      Yaw: 3.115396022796631
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1056
+  Height: 1043
   Hide Left Dock: false
   Hide Right Dock: false
   Image:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016a000003dafc0200000005fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006100fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000003da000000d600ffffff000000010000010f000002f1fc0200000004fc00000028000002f10000000000fffffffaffffffff0100000002fb0000000a0049006d0061006700650300000648000002620000010f000000e4fb0000000a0049006d0061006700650300000647000001510000010f000000e8fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000043000002dd000000ac00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a00000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000005cf000003da00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a000003b9fc0200000006fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000002e7000000c900fffffffb0000000a0049006d006100670065010000032a000000cc0000001600ffffff000000010000010f000002f1fc0200000004fc00000028000002f10000000000fffffffaffffffff0100000002fb0000000a0049006d0061006700650200000648000002620000010f000000e4fb0000000a0049006d0061006700650200000647000001510000010f000000e8fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000043000002dd000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a00000041800fffffffb0000000800540069006d0065010000000000000450000000000000000000000610000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -726,6 +1053,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1855
-  X: 65
-  Y: 24
+  Width: 1920
+  X: 0
+  Y: 0

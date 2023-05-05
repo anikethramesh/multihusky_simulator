@@ -40,6 +40,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   <include file="$(find husky_gazebo)/launch/playpen.launch" />
 
+  <!-- All the joystick stuff required to enable teleoperation and vibration -->
+  <node respawn="true" pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev" type="string" value="/dev/input/js0"/>
+    <param name="deadzone" value="0.1"/>
+  </node>
+    <param name="device" value="/dev/input/event256" />
+  <node name="joy_feedback_ros1" pkg="joy_feedback_ros" type="joy_feedback" output="screen"/>
+  <node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 /rumble joy_feedback_ros/Rumble 14000 14000"/>
+
   <group ns="h1">
     <include file="$(find multihusky_gazebo)/launch/spawn_multihusky.launch">
         <arg name="robot_namespace" value="h1" />
@@ -49,6 +58,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <arg name="laser_enabled" value="$(arg laser_enabled)"/>
         <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
     </include>
+
   </group>
 
   <group ns="h2">
@@ -62,6 +72,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </include>
   </group>
 
+  <!-- Multi Robot Management -->
+  <node name="teleopSwitcher" pkg="camera_switcher" type="teleop_switcher.py" output="screen"/>
+  <node pkg="camera_switcher" name="CameraSelector" type="camera_switcher.py" output="screen"/>
+  <node pkg="camera_switcher" name="joystickToggle" type="joystick_camera_selection.py" output="screen"/>
+
+  <!-- LoadInterface -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find multihusky_viz)/rviz/multihusky_viz_withcamera_.rviz" output="screen"/>
+
 
 </launch>
